@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "bootstrap": "^5.1.3"
+  },
+  "dependencies": {
+    "datatables.net": "^1.12.1",
+    "datatables.net-bs4": "^1.12.1",
+    "jquery-smarttab": "^4.0.2"
+  }
+}

@@ -1,0 +1,73 @@
+
+
+{% extends "security/login.html.twig" %}
+
+
+
+{% block body %}
+
+
+ <title>Register</title>
+<div class="wrapper">
+      <section class="login-content">
+         <div class="container h-100">
+            <div class="row justify-content-center align-items-center height-self-center">
+               <div class="col-md-5 col-sm-12 col-12 align-self-center">
+                  <div class="sign-user_card">
+                        <h3 class="mb-3">Sign Up</h3>
+                     <p>Create your  account.</p>
+    {{ form_start(registrationForm) }}
+                     
+                        <div class="row">
+                           <div class="col-lg-6">
+                              <div class="floating-label form-group">
+                                {{form_widget (registrationForm.firstname , {'attr': {'class': 'floating-input form-control' ,'type': 'text' ,'placeholder' : '' }} )}}    
+                                 <label>First Name</label>
+                              </div>
+                           </div>
+                           <div class="col-lg-6">
+                              <div class="floating-label form-group">
+                                {{form_widget (registrationForm.lastname , {'attr': {'class': 'floating-input form-control' ,'type': 'text' ,'placeholder' : ''  }} )}}    
+                                 <label>Last Name</label>
+                              </div>
+                           </div>
+                           <div class="col-lg-12">
+                              <div class="floating-label form-group">
+                                {{form_widget (registrationForm.email , {'attr': {'class': 'floating-input form-control' ,'type': 'email' ,'placeholder' : '' }} )}}    
+                                 <label>Email</label>
+                              </div>
+                           </div>
+                           <div class="col-lg-12">
+                              <div class="floating-label form-group">
+                                {{form_widget (registrationForm.plainPassword , {'attr': {'class': 'floating-input form-control' ,'type': 'password' ,'placeholder' : '' }} )}}                                  
+                                <label>Password</label>  
+
+                               {{form_errors (registrationForm.plainPassword )}}  
+                              
+                              </div>
+                                 {{form_widget(registrationForm._token)}}
+                           </div>
+
+                           <div class="col-lg-12">
+                              <div class="custom-control custom-checkbox mb-3 text-left">
+                                 <input type="checkbox" class="custom-control-input" id="customCheck1" required>
+
+                                 <label class="custom-control-label" for="customCheck1">I agree with the terms of use</label>
+                              </div>
+                           </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Sign Up</button>
+
+                        <p class="mt-3">
+                           Already have an Account <a href="{{path('app_login')}}" class="text-primary">Sign In</a> 
+                        </p>
+                     {{form_rest(registrationForm)}}
+       {{ form_end(registrationForm) }}
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      </div>
+{% endblock %}
+

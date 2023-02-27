@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+ <div class="content-page">
+        <div class="container-fluid">
+    <h1>Create new Repertoire</h1>
+
+  {{ form_start(form) }}
+  
+{{ form_end(form) }}
+
+</div>
+</div>
+    <a href="{{ path('app_repertoire_index') }}">back to list</a>
+{% endblock %}

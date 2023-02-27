@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Repertoire{% endblock %}
+
+{% block body %}
+    <h1>Edit Repertoire</h1>
+
+    {{ include('repertoire/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_repertoire_index') }}">back to list</a>
+
+    {{ include('repertoire/_delete_form.html.twig') }}
+{% endblock %}
